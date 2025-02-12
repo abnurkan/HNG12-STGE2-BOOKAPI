@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: HNG12-STGE2-BOOKAPI
+    env: docker
+    repo: https://github.com/Dan-Gaya/HNG12-STGE2-BOOKAPI.git
+    region: oregon
+    plan: free
+    autoDeploy: true

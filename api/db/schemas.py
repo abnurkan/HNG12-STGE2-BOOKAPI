@@ -52,14 +52,14 @@ class InMemoryDB:
         """
         self.books.update({book.id: book})
 
-    def get_book(self, book_id: int) -> Book:
+    def get_book_by_id(self, book_id: int) -> Book | None:
         """Gets a specific book from database.
 
         Args:
             book_id (int): Book ID.
 
         Returns:
-            Book: Book.
+            Book | None: Book if found, else None.
         """
         return self.books.get(book_id)
 
