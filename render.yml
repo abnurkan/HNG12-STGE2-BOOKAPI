@@ -1,8 +1,13 @@
+
 services:
   - type: web
-    name: HNG12-STGE2-BOOKAPI
-    env: docker
-    repo: https://github.com/Dan-Gaya/HNG12-STGE2-BOOKAPI.git
+    name: fastapi-app
+    runtime: python
     region: oregon
     plan: free
-    autoDeploy: true
+    repo: https://github.com/Dan-Gaya/HNG12-STGE2-BOOKAPI.git
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start.sh
+    envVars:
+      - key: PORT
+        value: 10000
